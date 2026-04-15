@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing | Glacier Fishing Quest</title>
+    <style>
+        :root { --primary-bg: #0a192f; --accent-blue: #00d2ff; --ice-white: #e6f1ff; --glass: rgba(255, 255, 255, 0.05); }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--primary-bg); color: var(--ice-white); }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 10px; background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); }
+        nav a { color: var(--ice-white); text-decoration: none; padding: 8px 15px; border-radius: 12px; transition: 0.3s; border: 1px solid transparent; }
+        nav a:hover, nav a.active { border-color: var(--accent-blue); color: var(--accent-blue); }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; animation: fadeIn 1s; }
+        .story-section { background: var(--glass); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); line-height: 1.8; }
+        h1 { color: var(--accent-blue); font-size: 2rem; }
+        .highlight { color: var(--accent-blue); font-weight: bold; }
+        .future-badge { display: inline-block; border: 1px solid var(--accent-blue); padding: 5px 15px; border-radius: 30px; margin-top: 20px; font-size: 0.9rem; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html" class="active">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="story-section">
+            <h1>The Developer's Journey</h1>
+            <p>My name is <span class="highlight">Dmytro Vitrozhar</span>, and I am an aspiring independent developer. <strong>Glacier Fishing Quest</strong> is more than just a game to me; it is a result of immense effort, learning, and passion for creating something meaningful.</p>
+            
+            <p>Every element of this game was built with the goal of bringing value and entertainment to the players. I am constantly working to improve the mechanics and the visual experience to ensure a high-quality product.</p>
+
+            <p>Currently, the app <span class="highlight">does not contain any paid features, advertisements, or subscriptions</span>. I want every user to enjoy the full content for free as I establish my presence in the App Store.</p>
+            
+            <div class="future-badge">Looking Forward</div>
+            <p>In the future, to support my journey as a developer and continue creating even better games, I plan to introduce premium features and subscription models. This will allow me to invest more time and resources into delivering even more value to you.</p>
+        </div>
+    </div>
+    <footer>&copy; 2024 Dmytro Vitrozhar.</footer>
+</body>
+</html>
