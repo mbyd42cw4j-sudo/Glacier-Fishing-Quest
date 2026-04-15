@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Glacier Fishing Quest</title>
+    <style>
+        :root { --primary-bg: #0a192f; --accent-blue: #00d2ff; --ice-white: #e6f1ff; --glass: rgba(255, 255, 255, 0.05); }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--primary-bg); color: var(--ice-white); }
+        nav { padding: 20px; display: flex; justify-content: center; gap: 10px; background: rgba(0,0,0,0.3); }
+        nav a { color: var(--ice-white); text-decoration: none; padding: 8px 15px; border-radius: 12px; transition: 0.3s; border: 1px solid transparent; }
+        nav a:hover, nav a.active { border-color: var(--accent-blue); color: var(--accent-blue); }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .policy-box { background: var(--glass); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        h1 { color: var(--accent-blue); }
+        .no-data-alert { border: 1px dashed var(--accent-blue); padding: 20px; border-radius: 10px; margin: 20px 0; background: rgba(0, 210, 255, 0.05); }
+        
+        /* Native Call Button */
+        .close-btn {
+            display: block; width: 100%; padding: 15px; background: transparent; 
+            border: 2px solid var(--accent-blue); color: var(--accent-blue);
+            border-radius: 15px; font-weight: bold; cursor: pointer; margin-top: 40px;
+            transition: 0.3s; font-size: 1.1rem;
+        }
+        .close-btn:active { background: var(--accent-blue); color: #000; transform: scale(0.98); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" class="active">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="policy-box">
+            <h1>Privacy Policy</h1>
+            <p>Effective Date: October 2024</p>
+            
+            <div class="no-data-alert">
+                <strong>Our Commitment:</strong> Glacier Fishing Quest is built with privacy in mind. We do not collect, store, or share any personal data from our users.
+            </div>
+
+            <h2>1. Information Collection</h2>
+            <p>We do not collect any personal information, such as your name, email address, or device identifier. The game functions entirely locally on your device.</p>
+
+            <h2>2. Information Storage</h2>
+            <p>Since no data is collected, no data is stored on our servers. Any game progress is stored only on your local device.</p>
+
+            <h2>3. Third Parties</h2>
+            <p>We do not share any information with third parties. There are no analytics or advertising SDKs in the current version of the app that track user behavior.</p>
+
+            <p>If you have any questions, contact us at omabey@ukr.net.</p>
+
+            <button class="close-btn" onclick="closeWebView()">Return to Game</button>
+        </div>
+    </div>
+
+    <script>
+        function closeWebView() {
+            try {
+                // iOS WebKit bridge
+                if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWebView) {
+                    window.webkit.messageHandlers.closeWebView.postMessage("close");
+                } 
+                // Android Javascript Interface
+                else if (window.AndroidInterface && window.AndroidInterface.close) {
+                    window.AndroidInterface.close();
+                } else {
+                    console.log("Native handler not found - this is expected in a browser.");
+                    alert("This button is intended to work inside the app.");
+                }
+            } catch(err) {
+                console.error("Error closing webview:", err);
+            }
+        }
+    </script>
+</body>
+</html>
