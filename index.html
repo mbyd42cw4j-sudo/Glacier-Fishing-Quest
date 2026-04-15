@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glacier Fishing Quest | Dmytro Vitrozhar</title>
+    <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-blue: #00d2ff;
+            --ice-white: #e6f1ff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            margin: 0; font-family: 'Segoe UI', Roboto, sans-serif;
+            background: radial-gradient(circle at top, #112240, var(--primary-bg));
+            color: var(--ice-white); min-height: 100vh; display: flex; flex-direction: column;
+        }
+        nav {
+            padding: 20px; display: flex; justify-content: center; gap: 10px;
+            background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100;
+        }
+        nav a {
+            color: var(--ice-white); text-decoration: none; font-size: 0.9rem;
+            padding: 8px 15px; border-radius: 12px; border: 1px solid transparent; transition: 0.3s;
+        }
+        nav a:hover, nav a.active { border-color: var(--accent-blue); background: var(--glass); color: var(--accent-blue); }
+        
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex: 1; }
+        .hero { text-align: center; margin-bottom: 50px; animation: slideDown 1s ease-out; }
+        h1 { font-size: 2.5rem; color: var(--accent-blue); margin-bottom: 10px; text-shadow: 0 0 15px rgba(0, 210, 255, 0.4); }
+        
+        .card {
+            background: var(--glass); border: 1px solid rgba(255,255,255,0.1);
+            padding: 30px; border-radius: 20px; backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        h2 { color: var(--accent-blue); margin-top: 0; }
+        .dev-tag { display: inline-block; background: var(--accent-blue); color: #000; padding: 2px 10px; border-radius: 5px; font-weight: bold; font-size: 0.8rem; margin-bottom: 10px; }
+        
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h1>Glacier Fishing Quest</h1>
+            <p>Embark on a chilling adventure through the icy waters.</p>
+        </div>
+        <div class="card">
+            <span class="dev-tag">Developer Profile</span>
+            <h2>Dmytro Vitrozhar</h2>
+            <p>Welcome to the official developer page for Glacier Fishing Quest. I am dedicated to crafting immersive mobile experiences that combine simple mechanics with captivating atmospheres.</p>
+            <p><strong>Official Contact:</strong> omabey@ukr.net</p>
+        </div>
+    </div>
+    <footer>&copy; 2024 Dmytro Vitrozhar. All rights reserved.</footer>
+</body>
+</html>
